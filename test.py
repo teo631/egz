@@ -5,6 +5,7 @@ from isleme import *
 import os
 #flask --app test run
 #"liveServer.settings.ignoreFiles": [ "**/**",   ]
+#Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
 app = Flask(__name__)
 cors = CORS(app)
