@@ -4,9 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="post.js"></script>
+
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Cilt hastalıkları testi</h1>
+    <div class="background"></div> 
+    <h1 style="text-align: center;">CİLT HASTALIK TESTİ</h1>
+    <div id="mainDiv">
         <br>
         <h1>Kaşıntı var mı?</h1>
         <input type="radio" id="k_y" name="kasinti" value="0" checked />
@@ -17,7 +21,7 @@
         <label for="contactChoice2">Var</label>
         <br>
 
-        <h1>Bebekse boyunda yaralar vs.....</h1>
+        <h1>Bebekse boyunda yaralar vs...?</h1>
         <input type="radio" id="bby_y" name="boyun" value="0" checked />
         <label for="contactChoice1">Yok</label>
         <br>
@@ -67,13 +71,19 @@
         <input id="upload" type="file">
         <br>
         <br>
+        <br>
+        <h1>SORGULAMA</h1>
         <button type="button" id="coolButton">
-            Sorgula
+            SORGULA
         </button>
         <br><br>
         <h1>Sonuç:</h1>
-        <p id="sonuc">
-            Sonucu öğrenmek için gerekli bilgileri girip sorguaya bas.
-        </p>
+        <div id="resultBox">
+            <p id="sonuc">
+                Sonucu öğrenmek için gerekli bilgileri girip sorguaya bas.
+            </p>
+        </div>
+        <br>
+    </div>
 </body>
 </html>
