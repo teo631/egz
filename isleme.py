@@ -1,2 +1,8 @@
-def hastaMi(path,b1,b2):
-    return "evet"
+def hastaMi(path,arr):
+    returnVal=""
+    if(arr[0]=="1"):
+        returnVal="iki gün ömrün kaldı"
+    else:
+        returnVal="yaşıyon"
+
+    return returnVal

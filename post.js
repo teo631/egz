@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
           return response.json();
         })
         .then(data => {
-            console.log('Server response:', data);
+            console.log('Server response:', data.status);
+            document.getElementById("sonuc").innerHTML = data.status
           })
         .catch(error => {
           console.error('There was a problem sending the image and data:', error);
