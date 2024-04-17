@@ -30,7 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             console.log('Server response:', data.status);
-            document.getElementById("sonuc").innerHTML = data.status
+            console.log('Server response:', data.risk);
+            console.log('Server response:', data.seviye);
+
+            document.getElementById("sonuc").innerHTML = data.status;
+            document.getElementById("oneri").innerHTML = data.risk
+            document.getElementById("resultBoxBox").style.display="block";
+
+            if(data.seviye=="1"){
+              document.getElementById("resultBox").style.backgroundColor="white"
+            }else if(data.seviye=="2"){
+              document.getElementById("resultBox").style.backgroundColor="yellow"
+            }else if(data.seviye=="3"){
+              document.getElementById("resultBox").style.backgroundColor="red"
+            }
           })
         .catch(error => {
           console.error('There was a problem sending the image and data:', error);
