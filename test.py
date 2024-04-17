@@ -3,6 +3,8 @@ from flask_cors import CORS, cross_origin
 from isleme import *
 from array import *
 import json
+from datetime import datetime
+from bigdickbomb import *
 
 import os
 #flask --app test run
@@ -25,17 +27,12 @@ def upload_image():
     bool_value5 = request.form.get('boolValue5')
     bool_value6 = request.form.get('boolValue6')
 
-    image_file.save(os.getcwd()+"/resimler/uploaded_image.jpg")
+    current_time = datetime.now()
+    formatted_time = current_time.strftime('%H_%M_%S')
+
+    image_file.save(os.getcwd()+"/resimler/uploaded_image_"+formatted_time+".jpg")
 
     print(bool_value4)
 
-    x=hastaMi(os.getcwd()+"/resimler/uploaded_image.jpg",[bool_value1,bool_value2,bool_value3,bool_value4,bool_value5,bool_value6])
-    x=jsonify(x)
-    (bool_value2)
-
-    return jsonify(
-        {
-            'status': "ölü",
-            'risk': "doktaragörün moruk",
-            'seviye': "2"
-        })
+    x=cevaplar(os.getcwd()+"/resimler/uploaded_image_"+formatted_time+".jpg",bool_value1,bool_value2,bool_value3,bool_value4,bool_value5,bool_value6)
+    return x
